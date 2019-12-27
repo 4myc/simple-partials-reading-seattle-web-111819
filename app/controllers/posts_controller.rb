@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @author = @post.author  #add @author so the partial has access to an instance variable
   end
 
   def new
